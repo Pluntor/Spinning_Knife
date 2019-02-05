@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Wirujący nóż</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(163, 119, 119);
+    }
+
+    nav {
+      background-color: black;
+      height: 100vh;
+      width: 200px;
+      padding-top: 50px;
+    }
+
+    a {
+      position: relative;
+      display: block;
+      width: 75%;
+      border: 3px solid white;
+      padding: 10px;
+      margin: 0 auto 20px auto;
+      text-decoration: none;
+      text-align: center;
+      font-family: arial, sans-serif;
+      text-transform: uppercase;
+      color: white;
+      transition: .3s;
+    }
+
+    a:hover {
+      color: black;
+      background-color: #fff;
+    }
+
+    a::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(80vw, -50%);
+      width: 60px;
+      height: 20px;
+      background: url("knife.png") no-repeat center;
+      background-size: cover;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    a::before {
+      display: block;
+      content: "";
+      position: absolute;
+      bottom: 20%;
+      left: 51%;
+      transform: translate(3vw, -50%);
+      width: 39px;
+      height: 25px;
+      background: url("flames.png") no-repeat center;
+      background-size: cover;
+      background-position: 0px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    a:hover::after {
+      animation: spin .3s forwards linear;
+    }
+
+    a:hover::before {
+      animation: burn .5s .3s forwards linear infinite;
+    }
+
+    @keyframes spin {
+      10% {
+        opacity: 1;
+        transform: translate(70vw, -50%) rotate(-90deg);
+      }
+
+      20% {
+        opacity: 1;
+        transform: translate(60vw, -50%) rotate(-180deg);
+      }
+
+      30% {
+        opacity: 1;
+        transform: translate(50vw, -50%) rotate(-270deg);
+      }
+
+      40% {
+        opacity: 1;
+        transform: translate(40vw, -50%) rotate(-360deg);
+      }
+
+      50% {
+        opacity: 1;
+        transform: translate(30vw, -50%) rotate(-450deg);
+      }
+
+      60% {
+        opacity: 1;
+        transform: translate(20vw, -50%) rotate(-540deg);
+      }
+
+      70% {
+        opacity: 1;
+        transform: translate(10vw, -50%) rotate(-630deg);
+      }
+
+      80% {
+        opacity: 1;
+        transform: translate(3vw, -50%) rotate(-720deg);
+      }
+
+      80.1% {
+        opacity: 1;
+        transform: translate(3vw, -50%) rotate(-720deg);
+        transform-origin: 50% 50%;
+      }
+
+      90% {
+        opacity: 1;
+        transform: translate(3vw, -50%) rotate(-730deg);
+        transform-origin: 0 100%;
+      }
+
+      92% {
+        opacity: 1;
+        transform: translate(3vw, -50%) rotate(-720deg);
+        transform-origin: 0 100%;
+      }
+
+      94% {
+        opacity: 1;
+        transform: translate(3vw, -50%) rotate(-725deg);
+        transform-origin: 0 100%;
+      }
+
+      96% {
+        opacity: 1;
+        transform: translate(3vw, -50%) rotate(-715deg);
+        transform-origin: 0 100%;
+      }
+
+      98% {
+        opacity: 1;
+        transform: translate(3vw, -50%) rotate(-713deg);
+        transform-origin: 0 100%;
+      }
+
+      100% {
+        opacity: 1;
+        transform: translate(3vw, -50%) rotate(-720deg);
+        transform-origin: 0 100%;
+      }
+
+    }
+
+    @keyframes burn {
+      50% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="#">Menu</a>
+    <a href="#">O nas</a>
+    <a href="#">Kontakt</a>
+  </nav>
+
+
+</body>
+
+</html>
