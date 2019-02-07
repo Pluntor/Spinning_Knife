@@ -1,166 +1,330 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: rgb(163, 119, 119);
+  background-color: rgb(163, 119, 119);
 }
 
 nav {
-    background-color: black;
-    height: 100vh;
-    width: 200px;
-    padding-top: 50px;
+  background-color: black;
+  height: 100vh;
+  width: 200px;
+  padding-top: 50px;
 }
 
 a {
-    position: relative;
-    display: block;
-    width: 75%;
-    border: 3px solid white;
-    padding: 10px;
-    margin: 0 auto 20px auto;
-    text-decoration: none;
-    text-align: center;
-    font-family: arial, sans-serif;
-    text-transform: uppercase;
-    color: white;
-    transition: .3s;
+  position: relative;
+  display: block;
+  width: 75%;
+  border: 3px solid white;
+  padding: 10px;
+  margin: 0 auto 20px auto;
+  text-decoration: none;
+  text-align: center;
+  font-family: arial, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  transition: .3s;
 }
 
 a:hover {
-    color: black;
-    background-color: #fff;
+  color: black;
+  background-color: #fff;
 }
 
+/* knife */
 a::after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(80vw, -50%);
-    width: 60px;
-    height: 20px;
-    background: url("knife.png") no-repeat center;
-    background-size: cover;
-    opacity: 0;
-    pointer-events: none;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 85%;
+  transform: translate(0, -50%);
+  width: 60px;
+  height: 20px;
+  background: url("knife.png") no-repeat center;
+  background-size: cover;
+  opacity: 0;
+  pointer-events: none;
 }
 
+/* flame */
 a::before {
-    display: block;
-    content: "";
-    position: absolute;
-    bottom: 20%;
-    left: 51%;
-    transform: translate(3vw, -50%);
-    width: 39px;
-    height: 25px;
-    background: url("flames.png") no-repeat center;
-    background-size: cover;
-    background-position: 0px;
-    opacity: 0;
-    pointer-events: none;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 20%;
+  left: 86%;
+  transform: translate(0, -50%);
+  width: 39px;
+  height: 25px;
+  background: url("flames.png") no-repeat center;
+  background-size: cover;
+  background-position: 0px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 a:hover::after {
-    animation: spin .3s forwards linear;
+  animation: spin .3s forwards linear;
 }
 
 a:hover::before {
-    animation: burn .5s .3s forwards linear infinite;
+  animation: burn .5s .3s forwards linear infinite;
+}
+
+a:hover .crack {
+  animation: cracks .3s linear forwards;
+}
+
+/* cracks */
+div.cracks {
+  position: absolute;
+  top: 48%;
+  left: 70%;
+  transform: translate(0, -50%);
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+}
+
+div.crack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 1px;
+  background-color: transparent;
+  transform-origin: 100% 0;
+}
+
+div.crack:nth-of-type(1) {
+  top: 20px;
+  left: 10px;
+  transform: rotate(60deg);
+  animation-delay: .3s;
+}
+
+div.crack:nth-of-type(2) {
+  top: 20px;
+  left: 10px;
+  transform: rotate(-10deg);
+  animation-delay: .3s;
+}
+
+div.crack:nth-of-type(3) {
+  top: 21px;
+  left: 13px;
+  width: 9px;
+  transform: rotate(160deg);
+  animation-delay: .3s;
+}
+
+div.crack:nth-of-type(4) {
+  width: 8px;
+  top: 21px;
+  left: 13px;
+  transform: rotate(220deg);
+  animation-delay: .3s;
+}
+
+div.crack:nth-of-type(5) {
+  width: 7px;
+  top: 9px;
+  left: 9px;
+  transform: rotate(10deg);
+  animation-delay: .6s;
+}
+
+div.crack:nth-of-type(6) {
+  width: 4px;
+  top: 8px;
+  left: 5px;
+  transform: rotate(-65deg);
+  animation-delay: .6s;
+}
+
+div.crack:nth-of-type(7) {
+  width: 4px;
+  top: 9px;
+  left: 12px;
+  transform: rotate(115deg);
+  animation-delay: .6s;
+}
+
+div.crack:nth-of-type(8) {
+  width: 4px;
+  top: 18px;
+  left: 27px;
+  transform: rotate(81deg);
+  animation-delay: .6s;
+}
+
+div.crack:nth-of-type(9) {
+  width: 3px;
+  top: 15px;
+  left: 27px;
+  transform: rotate(140deg);
+  animation-delay: .7s;
+}
+
+div.crack:nth-of-type(10) {
+  width: 7px;
+  top: 26px;
+  left: 20px;
+  transform: rotate(174deg);
+  animation-delay: .7s;
+}
+
+div.crack:nth-of-type(11) {
+  width: 5px;
+  top: 25px;
+  left: 22px;
+  transform: rotate(315deg);
+  animation-delay: .7s;
+}
+
+div.crack:nth-of-type(12) {
+  width: 5px;
+  top: 25px;
+  left: 28px;
+  transform: rotate(276deg);
+  animation-delay: 1s;
+}
+
+div.crack:nth-of-type(13) {
+  width: 5px;
+  top: 29px;
+  left: 18px;
+  transform: rotate(247deg);
+  animation-delay: 1s;
+}
+
+div.crack:nth-of-type(14) {
+  width: 5px;
+  top: 22px;
+  left: 10px;
+  transform: rotate(240deg);
+  animation-delay: .9s;
+}
+
+div.crack:nth-of-type(15) {
+  width: 5px;
+  top: 22px;
+  left: 5px;
+  transform: rotate(-55deg);
+  animation-delay: .9s;
+}
+
+div.crack:nth-of-type(16) {
+  width: 3px;
+  top: 26px;
+  left: 5px;
+  transform: rotate(42deg);
+  animation-delay: .9s;
 }
 
 @keyframes spin {
-    10% {
-        opacity: 1;
-        transform: translate(70vw, -50%) rotate(-90deg);
-    }
+  0% {
+    opacity: 1;
+    transform: translate(80vw, -50%);
+  }
 
-    20% {
-        opacity: 1;
-        transform: translate(60vw, -50%) rotate(-180deg);
-    }
+  10% {
+    opacity: 1;
+    transform: translate(70vw, -50%) rotate(-90deg);
+  }
 
-    30% {
-        opacity: 1;
-        transform: translate(50vw, -50%) rotate(-270deg);
-    }
+  20% {
+    opacity: 1;
+    transform: translate(60vw, -50%) rotate(-180deg);
+  }
 
-    40% {
-        opacity: 1;
-        transform: translate(40vw, -50%) rotate(-360deg);
-    }
+  30% {
+    opacity: 1;
+    transform: translate(50vw, -50%) rotate(-270deg);
+  }
 
-    50% {
-        opacity: 1;
-        transform: translate(30vw, -50%) rotate(-450deg);
-    }
+  40% {
+    opacity: 1;
+    transform: translate(40vw, -50%) rotate(-360deg);
+  }
 
-    60% {
-        opacity: 1;
-        transform: translate(20vw, -50%) rotate(-540deg);
-    }
+  50% {
+    opacity: 1;
+    transform: translate(30vw, -50%) rotate(-450deg);
+  }
 
-    70% {
-        opacity: 1;
-        transform: translate(10vw, -50%) rotate(-630deg);
-    }
+  60% {
+    opacity: 1;
+    transform: translate(20vw, -50%) rotate(-540deg);
+  }
 
-    80% {
-        opacity: 1;
-        transform: translate(3vw, -50%) rotate(-720deg);
-    }
+  70% {
+    opacity: 1;
+    transform: translate(10vw, -50%) rotate(-630deg);
+  }
 
-    80.1% {
-        opacity: 1;
-        transform: translate(3vw, -50%) rotate(-720deg);
-        transform-origin: 50% 50%;
-    }
+  80% {
+    opacity: 1;
+    transform: translate(0, -50%) rotate(-720deg);
+  }
 
-    90% {
-        opacity: 1;
-        transform: translate(3vw, -50%) rotate(-730deg);
-        transform-origin: 0 100%;
-    }
+  80.1% {
+    opacity: 1;
+    transform: translate(0, -50%) rotate(-720deg);
+    transform-origin: 50% 50%;
+  }
 
-    92% {
-        opacity: 1;
-        transform: translate(3vw, -50%) rotate(-720deg);
-        transform-origin: 0 100%;
-    }
+  90% {
+    opacity: 1;
+    transform: translate(0, -50%) rotate(-730deg);
+    transform-origin: 0 100%;
+  }
 
-    94% {
-        opacity: 1;
-        transform: translate(3vw, -50%) rotate(-725deg);
-        transform-origin: 0 100%;
-    }
+  92% {
+    opacity: 1;
+    transform: translate(0, -50%) rotate(-720deg);
+    transform-origin: 0 50%;
+  }
 
-    96% {
-        opacity: 1;
-        transform: translate(3vw, -50%) rotate(-715deg);
-        transform-origin: 0 100%;
-    }
+  94% {
+    opacity: 1;
+    transform: translate(0, -50%) rotate(-725deg);
+    transform-origin: 0 50%;
+  }
 
-    98% {
-        opacity: 1;
-        transform: translate(3vw, -50%) rotate(-713deg);
-        transform-origin: 0 100%;
-    }
+  96% {
+    opacity: 1;
+    transform: translate(0, -50%) rotate(-715deg);
+    transform-origin: 0 50%;
+  }
 
-    100% {
-        opacity: 1;
-        transform: translate(3vw, -50%) rotate(-720deg);
-        transform-origin: 0 100%;
-    }
+  98% {
+    opacity: 1;
+    transform: translate(0, -50%) rotate(-713deg);
+    transform-origin: 0 50%;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, -50%) rotate(-720deg);
+    transform-origin: 0 100%;
+  }
 
 }
 
 @keyframes burn {
-    50% {
-        opacity: 1;
-    }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes cracks {
+  100% {
+    background-color: #000;
+  }
 }
